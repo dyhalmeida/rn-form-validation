@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Keyboard, Alert } from 'react-native';
+import { Alert, Keyboard, StatusBar } from 'react-native';
 
 import { Formik } from 'formik';
 
@@ -45,8 +45,10 @@ export default function src() {
     >
       {({ values, handleSubmit, handleChange, errors }) => (
         <Container>
-          <Title>Formik + Yup</Title>
+          <StatusBar barStyle="light-content" backgroundColor="#0f198c" />
           <Form>
+            <Title>Formik + Yup</Title>
+
             <Label>Nome Completo</Label>
             <Input
               value={values.name}
